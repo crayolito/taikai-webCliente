@@ -28,42 +28,42 @@ export enum StatusSubcripcion { free, premium, empresial, none }
 })
 export default class PackageComponent {
   public router = inject(Router);
-  supcricion1: Subcripcion = new Subcripcion(
+  supcricion1 = new Subcripcion(
     "Free",
     "assets/gratis.svg",
     StatusSubcripcion.free,
-    "Accede a funciones básicas para registrar y administrar tu centro comercial sin costo pero con un limite de solo 20 comerciantes.",
+    "Acceso básico al sistema de gestión de licencias, ideal para nuevos usuarios que desean explorar la plataforma.",
     [
-      "Registro de centro comercial y comerciantes.",
-      "Creación de mapa con puntos de interés de forma manual.",
-      "Delimitación geográfica del centro.",
-      "Soporte por correo electrónico."
+      "Creación automática de una wallet básica a través de Alchemy, enlazada a su correo electrónico.",
+      "Hasta 10 transacciones de licencia por mes.",
+      "Soporte limitado a través de correo electrónico.",
+      "Acceso básico a la gestión de licencias en la blockchain con funcionalidades limitadas."
     ]
   );
 
-  supcricion2: Subcripcion = new Subcripcion(
-    "Premium 349Bs/mes",
+  supcricion2 = new Subcripcion(
+    "Mensual 130Bs/mes",
     "assets/subcripcion.svg",
     StatusSubcripcion.premium,
-    "Funciones avanzadas para una mejor gestión productos y marketing basico de tu centro comercial y un registro limitado de 70 comerciantes.",
+    "Funciones avanzadas para usuarios que requieren un manejo más detallado y frecuente de sus licencias.",
     [
       "Todo lo del paquete Free.",
-      "Representación detallada de pasillos y pisos.",
-      "Inclusión de redes sociales y opciones de envío.",
-      "Coordinación avanzada mediante Autocad y ArcGis."
+      "Hasta 100 transacciones de licencia por mes.",
+      "Soporte prioritario a través de correo electrónico y chat.",
+      "Acceso a herramientas de análisis y reportes detallados."
     ]
   );
 
-  supcricion3: Subcripcion = new Subcripcion(
-    "Pro 3141Bs/Anual",
+  supcricion3 = new Subcripcion(
+    "Anual 1650Bs/año",
     "assets/on-premises.svg",
     StatusSubcripcion.empresial,
-    "Solución completa con soporte prioritario y funciones exclusivas para grandes centros comerciales.",
+    "Solución completa para empresas con necesidades de gestión intensiva de licencias.",
     [
-      "Todo lo del paquete Premium.",
-      "Registro ilimitado de casetas.",
+      "Todo lo del paquete Mensual.",
+      "Hasta 1000 transacciones de licencia por año.",
       "Soporte prioritario 24/7.",
-      "Consultoría personalizada y herramientas avanzadas."
+      "Consultoría personalizada y acceso a herramientas avanzadas de administración."
     ]
   );
 
