@@ -1,0 +1,51 @@
+<div class="h-full w-full ">
+  <form method="post" action="" class=" w-full h-[110%] mt-[2.5%] pb-[1%] flex flex-col items-center"
+    autocomplete="off">
+    <!-- PARTE 1 -->
+    <!-- INICIO -->
+    <div class="flex flex-row w-[80%] h-[48%] gap-[2%] items-center justify-center">
+      <label for="fileUpload"
+        class="w-[580px] h-[450px] flex flex-col justify-center items-center text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+        <img id="imagePreview" [src]="imageEmpresa()" alt=""
+          [class]="estadoImagen() ? 'w-full h-full object-contain' : 'w-[200px] h-[200px] object-contain'" />
+        <input id="fileUpload" type='file' class="hidden" />
+      </label>
+
+      <div class="w-[40%] h-[95%]">
+        <!-- NOMBRE DEL COMERCIAL -->
+        <div class="w-full h-[25%]  flex flex-col justify-between">
+          <p class=" font-google-anta text-2xl pt-2" style="text-shadow: 1px 1px #31bb11;">Tipo Licencia</p>
+          <input type=" text" placeholder="Tipo de licencia"
+            class="rounded-md w-full h-[60%] font-google-anta text-2xl pl-4 border-2 border-gray-400 focus:outline-none focus:border-custom-primary focus:border-4">
+        </div>
+        <!-- DUEÑO DEL COMERCIAL  -->
+        <div class="w-full h-[25%]  flex flex-col justify-between">
+          <p class=" font-google-anta text-2xl pt-2" style="text-shadow: 1px 1px #31bb11;">Propietario</p>
+          <input type=" text" placeholder="Propietario"
+            class="rounded-md w-full h-[60%] font-google-anta text-2xl pl-4 border-2 border-gray-400 focus:outline-none focus:border-custom-primary focus:border-4">
+        </div>
+        <!-- HORARIO ATENCION -->
+        <div class="w-full h-[25%]  flex flex-col justify-between">
+          <p class=" font-google-anta text-2xl pt-2" style="text-shadow: 1px 1px #31bb11;">Fecha Emision</p>
+          <input type=" text" placeholder="Fecha Emision"
+            class="rounded-md w-full h-[60%] font-google-anta text-2xl pl-4 border-2 border-gray-400 focus:outline-none focus:border-custom-primary focus:border-4">
+        </div>
+        <!-- NRO ATENCION  -->
+        <div class="w-full h-[25%]  flex flex-col justify-between">
+          <p class=" font-google-anta text-2xl pt-2" style="text-shadow: 1px 1px #31bb11;">Nro Licencia</p>
+          <input type="number" placeholder="Nro Licencia" oninput="validity.valid||(value='1');"
+            class="rounded-md w-full h-[60%] font-google-anta text-2xl pl-4 border-2 border-gray-400 focus:outline-none focus:border-custom-primary focus:border-4">
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row w-[80%] h-[10%]  items-center justify-end">
+      <button type="submit" class="h-[80%] w-[12%] rounded-xl bg-custom-primary mr-[9%] border-4 shadow-xl">
+        <p class="text-white font-bold font-google-anta text-3xl py-4" style="text-shadow: 2px 2px black;">
+          Guardar</p>
+      </button>
+    </div>
+  </form>
+  <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+  <script src="upload_widget.js" type="text/javascript"></script>
+</div>
